@@ -13,7 +13,7 @@ namespace DAL
 
         public static string CONECTAR
         {
-            get { return @"Data Source=192.168.45.208; Database=colingbd;User ID=sa;Password=1234sql;"; }
+            get { return @"Data Source=(local); Initial Catalog=ExamenFinalBD; Integrated Security=True; TrustServerCertificate=true"; }
             //get { return ConfigurationManager.ConnectionStrings["cadena"].ToString(); }
         }
         public static DataSet EjecutarDataSet(string consulta)
@@ -60,20 +60,5 @@ namespace DAL
             da.Fill(dt);
             return dt;
         }
-
-        public static string EjecutarEscalarComoString(string consulta)
-        {
-            using (SqlConnection conectar = new SqlConnection(conexion.CONECTAR))
-            {
-                conectar.Open();
-                using (SqlCommand cmd = new SqlCommand(consulta, conectar))
-                {
-                    cmd.CommandTimeout = 5000;
-                    object result = cmd.ExecuteScalar();
-                    return result != null ? result.ToString() : null;
-                }
-            }
-        }
-
     }
 }

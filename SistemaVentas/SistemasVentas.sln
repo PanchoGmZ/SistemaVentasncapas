@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemasVentas.BSS", "SistemasVentas.BSS\SistemasVentas.BSS.csproj", "{C2A80A1A-3991-4837-8E86-EE01F01D3C2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemasVentas.BSS", "SistemasVentas.BSS\SistemasVentas.BSS.csproj", "{C2A80A1A-3991-4837-8E86-EE01F01D3C2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemasVentas.DAL", "SistemasVentas.DAL\SistemasVentas.DAL.csproj", "{D7821A66-614D-4CB4-9854-A840EF50D8C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemasVentas.DAL", "SistemasVentas.DAL\SistemasVentas.DAL.csproj", "{D7821A66-614D-4CB4-9854-A840EF50D8C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemasVentas.Modelos", "SistemasVentas.Modelos\SistemasVentas.Modelos.csproj", "{6810BF1C-9923-4FA0-9B07-6BB25E066E35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemasVentas.Modelos", "SistemasVentas.Modelos\SistemasVentas.Modelos.csproj", "{6810BF1C-9923-4FA0-9B07-6BB25E066E35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemasVentas.Vista", "SistemasVentas.Vista\SistemasVentas.Vista.csproj", "{0A1284C1-10F4-4406-B836-10C9D657F785}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemasVentas.Vista", "SistemasVentas.Vista\SistemasVentas.Vista.csproj", "{0A1284C1-10F4-4406-B836-10C9D657F785}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
