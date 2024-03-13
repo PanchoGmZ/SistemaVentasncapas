@@ -1,4 +1,4 @@
-namespace SistemasVentas.VISTA
+namespace SistemasVentas.Vista
 {
     internal static class Program
     {
