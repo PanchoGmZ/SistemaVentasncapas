@@ -10,7 +10,7 @@ namespace SistemasVentas.DAL
 {
     public class UsuarioDAL
     {
-        public DataTable ListarUsuarioDal()
+        public DataTable ListarUsuariosDal()
         {
             string consulta = "select * from usuario";
             DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");

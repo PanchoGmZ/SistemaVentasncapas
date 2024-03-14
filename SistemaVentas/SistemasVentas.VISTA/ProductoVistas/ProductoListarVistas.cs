@@ -17,7 +17,7 @@ namespace SistemasVentas.VISTA.ProductoVistas
         {
             InitializeComponent();
         }
-        ProductoBss bss=new ProductoBss();
+        ProductoBss bss = new ProductoBss();
         private void ProductoListarVistas_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bss.ListarProductoBss();

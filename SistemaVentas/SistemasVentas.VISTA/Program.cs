@@ -1,6 +1,9 @@
 
 using System.Data.SqlClient;
 using System.Data;
+using SistemasVentas.VISTA.UsuarioVistas;
+using SistemasVentas.VISTA.MarcaVistas;
+using SistemasVentas.VISTA.DetalleVentaVistas;
 
 namespace SistemasVentas.Vista
 {
@@ -15,7 +18,7 @@ namespace SistemasVentas.Vista
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new PersonaVistas.PersonaListarVista());
+            Application.Run(new DetalleVentaListarVistas ());
         }
     }
 }

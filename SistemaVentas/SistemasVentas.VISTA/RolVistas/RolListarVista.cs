@@ -17,7 +17,7 @@ namespace SistemasVentas.VISTA.RolVistas
         {
             InitializeComponent();
         }
-        RolBss bss=new RolBss();
+        RolBss bss = new RolBss();
         private void RolListarVista_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bss.ListarRolBss();

@@ -17,7 +17,7 @@ namespace SistemasVentas.VISTA.DetalleIng_Vistas
         {
             InitializeComponent();
         }
-        DetalleIngBss bss=new DetalleIngBss();
+        DetalleIngBss bss = new DetalleIngBss();
         private void DetalleIngListarVistas_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bss.ListarDetalleIngBss();

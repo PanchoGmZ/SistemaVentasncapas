@@ -11,9 +11,9 @@ namespace SistemasVentas.BSS
     public class UsuarioBss
     {
         UsuarioDAL dal = new UsuarioDAL();
-        public DataTable ListarUsuarioBss()
+        public DataTable ListarUsuariosBss()
         {
-            return dal.ListarUsuarioDal();
+            return dal.ListarUsuariosDal();
         }
     }
 }
