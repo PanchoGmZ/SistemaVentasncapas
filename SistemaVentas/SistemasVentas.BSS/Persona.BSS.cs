@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.DAL;
+using SistemasVentas.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,6 +15,10 @@ namespace SistemasVentas.BSS
         public DataTable ListarPersonaBss()
         {
             return dal.ListarPersonaDal();
+        }
+        public void InsertarPersonaBss(Persona persona)
+        {
+            dal.InsertarPersonaDal(persona);
         }
     }
 }
