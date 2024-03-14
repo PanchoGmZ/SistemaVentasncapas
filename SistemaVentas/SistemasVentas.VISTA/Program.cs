@@ -1,3 +1,7 @@
+
+using System.Data.SqlClient;
+using System.Data;
+
 namespace SistemasVentas.Vista
 {
     internal static class Program
@@ -15,3 +19,4 @@ namespace SistemasVentas.Vista
         }
     }
 }
+

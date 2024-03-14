@@ -13,7 +13,7 @@ namespace DAL
 
         public static string CONECTAR
         {
-            get { return @"Data Source=(local); Initial Catalog=ExamenFinalBD; Integrated Security=True; TrustServerCertificate=true"; }
+            get { return @"Data Source=DESKTOP-MEJFDG4\SQL; Initial Catalog=TIENDABD; Integrated Security=True; TrustServerCertificate=true;"; }
             //get { return ConfigurationManager.ConnectionStrings["cadena"].ToString(); }
         }
         public static DataSet EjecutarDataSet(string consulta)
@@ -53,7 +53,7 @@ namespace DAL
             string p = conexion.CONECTAR;
             SqlConnection conectar = new SqlConnection(conexion.CONECTAR);
             SqlCommand cmd = new SqlCommand(consulta, conectar);
-            cmd.CommandTimeout = 5000;
+            cmd.CommandTimeout = 7000;
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
             DataTable dt = new DataTable(tabla);
@@ -62,3 +62,4 @@ namespace DAL
         }
     }
 }
+

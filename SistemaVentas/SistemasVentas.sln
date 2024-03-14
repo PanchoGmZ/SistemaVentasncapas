@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemasVentas.DAL", "Siste
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemasVentas.Modelos", "SistemasVentas.Modelos\SistemasVentas.Modelos.csproj", "{6810BF1C-9923-4FA0-9B07-6BB25E066E35}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemasVentas.Vista", "SistemasVentas.Vista\SistemasVentas.Vista.csproj", "{0A1284C1-10F4-4406-B836-10C9D657F785}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemasVentas.VISTA", "SistemasVentas.Vista\SistemasVentas.VISTA.csproj", "{0A1284C1-10F4-4406-B836-10C9D657F785}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
