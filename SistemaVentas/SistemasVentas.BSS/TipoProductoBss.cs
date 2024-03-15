@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.DAL;
+using SistemasVentas.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,6 +15,10 @@ namespace SistemasVentas.BSS
         public DataTable ListarTipoProductoBss()
         {
             return dal.ListarTipoProductoDal();
+        }
+        public void InsertarTipoProductoBss(TipoProducto tipoProducto)
+        {
+            dal.InsertarTipoProductoDal(tipoProducto);
         }
     }
 }
