@@ -21,7 +21,25 @@ namespace SistemasVentas.VISTA.RolVistas
         RolBss bss= new RolBss();
         private void txtNombreRol_TextChanged(object sender, EventArgs e)
         {
-            ROL p=new ROL();
+      
+        }
+
+        private void RolInsertarVista_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GuardarBtn_Click(object sender, EventArgs e)
+        {
+            ROL p = new ROL();
+            p.Nombre = txtNombreRol.Text;
+            bss.InsertarRolBss(p);
+            MessageBox.Show("Se guardo la nueva persona exitosamente");
+        }
+
+        private void txtNombreRol_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

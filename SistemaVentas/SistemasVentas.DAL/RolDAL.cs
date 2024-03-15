@@ -1,4 +1,4 @@
-﻿using SistemasVentas.
+﻿
 using DAL;
 using SistemasVentas.Modelos;
 using System;

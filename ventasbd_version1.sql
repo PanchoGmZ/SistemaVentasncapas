@@ -870,4 +870,4 @@ insert into detalleing values (19, 79, '2023-02-27 15:32:11', 71, 150, 250, 150,
 insert into detalleing values (20, 80, '2023-01-14 03:47:29', 91, 180, 200, 180, 'Exitoso');
 
 
-select * from DETALLEING
+select * from PERSONA

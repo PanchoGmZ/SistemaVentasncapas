@@ -7,6 +7,9 @@ using SistemasVentas.VISTA.DetalleVentaVistas;
 using SistemasVentas.VISTA.RolVistas;
 using SistemasVentas.VISTA.ClienteVistas;
 using SistemasVentas.VISTA.PersonaVistas;
+using SistemasVentas.VISTA.ProductoVistas;
+using SistemasVentas.VISTA.ProveedorVistas;
+using SistemasVentas.VISTA.TipoProdVistas;
 
 namespace SistemasVentas.Vista
 {
@@ -21,7 +24,7 @@ namespace SistemasVentas.Vista
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new PersonaInsertarVista ());
+            Application.Run(new UsuarioInsertarVistas ());
         }
     }
 }

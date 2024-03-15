@@ -1,6 +1,6 @@
-﻿namespace SistemasVentas.VISTA.RolVistas
+﻿namespace SistemasVentas.VISTA.TipoProdVistas
 {
-    partial class RolInsertarVista
+    partial class TipoProdInsertarVista
     {
         /// <summary>
         /// Required designer variable.
@@ -29,49 +29,47 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNombreRol = new System.Windows.Forms.TextBox();
-            this.GuardarBtn = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(36, 81);
+            this.label1.Location = new System.Drawing.Point(33, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
-            // txtNombreRol
+            // txtNombre
             // 
-            this.txtNombreRol.Location = new System.Drawing.Point(122, 79);
-            this.txtNombreRol.Name = "txtNombreRol";
-            this.txtNombreRol.Size = new System.Drawing.Size(282, 23);
-            this.txtNombreRol.TabIndex = 1;
-            this.txtNombreRol.TextChanged += new System.EventHandler(this.txtNombreRol_TextChanged_1);
+            this.txtNombre.Location = new System.Drawing.Point(121, 64);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(210, 23);
+            this.txtNombre.TabIndex = 1;
             // 
-            // GuardarBtn
+            // btnGuardar
             // 
-            this.GuardarBtn.Location = new System.Drawing.Point(161, 133);
-            this.GuardarBtn.Name = "GuardarBtn";
-            this.GuardarBtn.Size = new System.Drawing.Size(110, 39);
-            this.GuardarBtn.TabIndex = 2;
-            this.GuardarBtn.Text = "Guardar";
-            this.GuardarBtn.UseVisualStyleBackColor = true;
-            this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
+            this.btnGuardar.Location = new System.Drawing.Point(147, 157);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(113, 41);
+            this.btnGuardar.TabIndex = 2;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // RolInsertarVista
+            // TipoProdInsertarVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 288);
-            this.Controls.Add(this.GuardarBtn);
-            this.Controls.Add(this.txtNombreRol);
+            this.ClientSize = new System.Drawing.Size(402, 296);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
-            this.Name = "RolInsertarVista";
-            this.Text = "RolInsertarVista";
-            this.Load += new System.EventHandler(this.RolInsertarVista_Load);
+            this.Name = "TipoProdInsertarVista";
+            this.Text = "TipoProdInsertarVista";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,7 +78,7 @@
         #endregion
 
         private Label label1;
-        private TextBox txtNombreRol;
-        private Button GuardarBtn;
+        private TextBox txtNombre;
+        private Button btnGuardar;
     }
 }

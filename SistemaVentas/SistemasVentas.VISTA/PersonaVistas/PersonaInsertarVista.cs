@@ -38,5 +38,10 @@ namespace SistemasVentas.VISTA.PersonaVistas
 
             MessageBox.Show("Se guardó la nueva persona exitosamente");
         }
+
+        private void PersonaInsertarVista_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
