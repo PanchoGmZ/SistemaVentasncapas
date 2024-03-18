@@ -40,12 +40,29 @@ namespace SistemasVentas.DAL
                 persona.Nombre = tabla.Rows[0]["nombre"].ToString();
                 persona.Apellido = tabla.Rows[0]["apellido"].ToString();
                 persona.Telefono = tabla.Rows[0]["telefono"].ToString();
-                persona.Ci = tabla.Rows[0]["ci"].ToString();
+                persona.Ci =     tabla.Rows[0]["ci"].ToString();
                 persona.Correo = tabla.Rows[0]["correo"].ToString();
                 persona.Estado = tabla.Rows[0]["estado"].ToString();
             }
             return persona;
 
         }
+        public void EditarPersonaDal(Persona persona)
+        {
+            string consulta = "update persona set nombre='" + persona.Nombre + "'," +
+                                                           "apellido='" + persona.Apellido + "'," +
+                                                           "telefono='" + persona.Telefono + "'," +
+                                                           "ci='" + persona.Ci + "'," +
+                                                           "correo'" + persona.Correo + "'," +
+                                                "where idpersona=" + persona.IdPersona;
+            conexion.Ejecutar(consulta);
+
+        }
+        public void EliminarPersonaDal(int id)
+        {
+            string consulta = "delete from persona where idpersona" + id;
+            conexion.Ejecutar(consulta);
+        }
     }
+
 }

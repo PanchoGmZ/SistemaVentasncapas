@@ -28,11 +28,11 @@ namespace SistemasVentas.VISTA.PersonaVistas
         {
 
             Persona p = new Persona();
-            p.Nombre=txtNombre.Text;
-            p.Apellido=txtApellido.Text;
-            p.Telefono=txtTelefono.Text;
-            p.Ci=txtCI.Text;
-            p.Correo=txtCorreo.Text;
+            p.Nombre = txtNombre.Text;
+            p.Apellido = txtApellido.Text;
+            p.Telefono = txtTelefono.Text;
+            p.Ci = txtCI.Text;
+            p.Correo = txtCorreo.Text;
 
             bss.InsertarPersonaBss(p);
 
@@ -40,6 +40,11 @@ namespace SistemasVentas.VISTA.PersonaVistas
         }
 
         private void PersonaInsertarVista_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

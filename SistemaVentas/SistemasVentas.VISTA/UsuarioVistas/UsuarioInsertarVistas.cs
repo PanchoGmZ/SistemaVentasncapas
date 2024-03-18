@@ -28,7 +28,7 @@ namespace SistemasVentas.VISTA.UsuarioVistas
         PersonaBss bss = new PersonaBss();
         private void btn_Seleccionar_Click(object sender, EventArgs e)
         {
-        
+
             PersonaListarVista fr = new PersonaListarVista();
             if (fr.ShowDialog() == DialogResult.OK) { }
             {
@@ -39,10 +39,21 @@ namespace SistemasVentas.VISTA.UsuarioVistas
 
         private void UsuarioInsertarVistas_Load(object sender, EventArgs e)
         {
-           
- 
 
 
+
+
+        }
+        UsuarioBss bssuser = new UsuarioBss();
+        private void btn_Guardar_Click(object sender, EventArgs e)
+        {
+            Usuario usuario = new Usuario();
+            usuario.IdPersona=IdPersonaSeleccionda;
+            usuario.NombreUser = textBox2.Text;
+            usuario.Contraeña = textBox3.Text;
+            usuario.Fecha = dateTimePicker1.Value;
+            bssuser.InsertarUsuarioBss(usuario);
+            MessageBox.Show("Usuario registrado");
         }
     }
 }

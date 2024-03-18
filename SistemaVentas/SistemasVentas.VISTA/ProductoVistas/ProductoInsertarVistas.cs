@@ -35,7 +35,7 @@ namespace SistemasVentas.VISTA.ProductoVistas
 
         private void ProductoInsertarVistas_Load(object sender, EventArgs e)
         {
-
+         
         }
     }
 }

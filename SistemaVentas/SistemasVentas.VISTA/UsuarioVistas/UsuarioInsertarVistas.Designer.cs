@@ -128,6 +128,7 @@
             btn_Guardar.TabIndex = 9;
             btn_Guardar.Text = "Guardar";
             btn_Guardar.UseVisualStyleBackColor = true;
+            btn_Guardar.Click += btn_Guardar_Click;
             // 
             // cancelar_btn
             // 
