@@ -53,14 +53,14 @@ namespace SistemasVentas.DAL
                                                            "apellido='" + persona.Apellido + "'," +
                                                            "telefono='" + persona.Telefono + "'," +
                                                            "ci='" + persona.Ci + "'," +
-                                                           "correo'" + persona.Correo + "'," +
+                                                           "correo'" + persona.Correo + "'" +
                                                 "where idpersona=" + persona.IdPersona;
             conexion.Ejecutar(consulta);
 
         }
         public void EliminarPersonaDal(int id)
         {
-            string consulta = "delete from persona where idpersona" + id;
+            string consulta = "delete from persona where idpersona=" + id;
             conexion.Ejecutar(consulta);
         }
     }
