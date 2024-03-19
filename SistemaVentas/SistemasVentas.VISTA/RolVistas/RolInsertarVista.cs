@@ -19,6 +19,7 @@ namespace SistemasVentas.VISTA.RolVistas
             InitializeComponent();
         }
         RolBss bss= new RolBss();
+        public static int IdRolSeleccionada = 0;
         private void txtNombreRol_TextChanged(object sender, EventArgs e)
         {
       

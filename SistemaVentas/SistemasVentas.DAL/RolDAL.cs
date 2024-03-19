@@ -26,5 +26,31 @@ namespace SistemasVentas.DAL
             conexion.Ejecutar(consulta);
 
         }
+        public ROL ObtenerRolId(int id)
+        {
+            string consulta = "select * from rol where idrol=" + id;
+            DataTable tabla = conexion.EjecutarDataTabla(consulta, "asdas");
+            ROL rol = new ROL();
+            if (tabla.Rows.Count > 0)
+            {
+                rol.IdRol = Convert.ToInt32(tabla.Rows[0]["idrol"]);
+                rol.Nombre = tabla.Rows[0]["nombre"].ToString();
+                rol.Estado = tabla.Rows[0]["estado"].ToString();
+            }
+            return rol;
+
+        }
+        public void EditarROlDal(ROL rol)
+        {
+            string consulta = "update rol set nombre='" + rol.Nombre + "'," +                                                
+                                                   "where idrol=" + rol.IdRol;
+            conexion.Ejecutar(consulta);
+
+        }
+        public void EliminarROLDal(int id)
+        {
+            string consulta = "delete from rol where idrol=" + id;
+            conexion.Ejecutar(consulta);
+        }
     }
 }
