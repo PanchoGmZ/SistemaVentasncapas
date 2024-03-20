@@ -14,21 +14,23 @@ namespace SistemasVentas.BSS
         PersonaDal dal = new PersonaDal();
         public DataTable ListarPersonaBss()
         {
-            return dal.ListarPersonaDal();
+            return dal.ListarPersonasDal();
         }
+
         public void InsertarPersonaBss(Persona persona)
         {
             dal.InsertarPersonaDal(persona);
         }
-        public Persona ObtenerIdbss(int id)
+        public Persona ObtenerIdBss(int id)
         {
             return dal.ObtenerPersonaId(id);
         }
-        public void EditarPersonaBss (Persona persona)
+        public void EditarPersonaBss(Persona p)
         {
-             dal.EditarPersonaDal (persona);
+            dal.EditarPersonaDal(p);
         }
-        public void EliminarPersonaBss (int id)
+
+        public void EliminarPersonBss(int id)
         {
             dal.EliminarPersonaDal(id);
         }

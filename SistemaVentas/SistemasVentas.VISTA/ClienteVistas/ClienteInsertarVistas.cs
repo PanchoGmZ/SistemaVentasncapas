@@ -18,6 +18,7 @@ namespace SistemasVentas.VISTA.ClienteVistas
         {
             InitializeComponent();
         }
+        public static int IdClienteSeleccionado = 0;
         ClienteBss bss=new ClienteBss();
         private void button1_Click(object sender, EventArgs e)
         {

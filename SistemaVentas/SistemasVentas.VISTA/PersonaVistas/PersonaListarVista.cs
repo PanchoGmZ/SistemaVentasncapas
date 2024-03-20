@@ -26,7 +26,7 @@ namespace SistemasVentas.Vista.PersonaVistas
 
         private void btn_Seleccionar_Click(object sender, EventArgs e)
         {
-            UsuarioInsertarVistas.IdPersonaSeleccionda = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            UsuarioInsertarVistas.IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
         }
 
         private void Agregar_btn_Click(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace SistemasVentas.Vista.PersonaVistas
         private void editar_btn_Click(object sender, EventArgs e)
         {
             int IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            PersonaEditarVistas fr = new PersonaEditarVistas(IdPersonaSeleccionada);
+            PersonaEditarVista fr = new PersonaEditarVista(IdPersonaSeleccionada);
             if (fr.ShowDialog() == DialogResult.OK)
             {
                 dataGridView1.DataSource = bss.ListarPersonaBss();
@@ -54,7 +54,7 @@ namespace SistemasVentas.Vista.PersonaVistas
             DialogResult result = MessageBox.Show("Esta seguro de eliminar a esta persona?", "Eliminando", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                bss.EliminarPersonaBss(IdPersonaSeleccionada);
+                bss.EliminarPersonBss(IdPersonaSeleccionada);
                 dataGridView1.DataSource=bss.ListarPersonaBss();
             }
         }

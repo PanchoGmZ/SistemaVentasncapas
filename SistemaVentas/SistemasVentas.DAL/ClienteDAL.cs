@@ -26,5 +26,32 @@ namespace SistemasVentas.DAL
             conexion.Ejecutar(consulta);
 
         }
+        public Cliente ObtenerClienteId(int id)
+        {
+            string consulta = "select * from cliente where idcliente=" + id;
+            DataTable tabla = conexion.EjecutarDataTabla(consulta, "asdas");
+            Cliente cliente = new Cliente();
+            if (tabla.Rows.Count > 0)
+            {
+                cliente.IdCliente = Convert.ToInt32(tabla.Rows[0]["idcliente"]);
+                cliente.IdPersona = Convert.ToInt32(tabla.Rows[0]["idpersona"]);
+                cliente.TipoCliente = tabla.Rows[0]["tipocliente"].ToString();
+                cliente.CodigoCliente = tabla.Rows[0]["codigocliente"].ToString();
+                cliente.Estado= tabla.Rows[0]["estado"].ToString();
+            }
+            return cliente;
+        }
+        public void EditarClienteDal (Cliente cliente)
+        {
+            string consulta = "update cliente set tipocliente='" + cliente.TipoCliente + "'," +
+                                                   "codigocliente='" + cliente.CodigoCliente + "'," +
+                                                   "where idcliente=" + cliente.IdCliente;
+            conexion.Ejecutar(consulta);
+        }
+        public void EliminarClienteDal (int id)
+        {
+            string consulta = "delete from cliente where idcliente=" + id;
+            conexion.Ejecutar(consulta);
+        }
     }
 }

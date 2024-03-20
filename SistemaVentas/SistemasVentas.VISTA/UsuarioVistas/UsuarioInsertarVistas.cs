@@ -24,7 +24,7 @@ namespace SistemasVentas.VISTA.UsuarioVistas
         {
 
         }
-        public static int IdPersonaSeleccionda = 0;
+        public static int IdPersonaSeleccionada = 0;
         PersonaBss bss = new PersonaBss();
         private void btn_Seleccionar_Click(object sender, EventArgs e)
         {
@@ -32,7 +32,7 @@ namespace SistemasVentas.VISTA.UsuarioVistas
             PersonaListarVista fr = new PersonaListarVista();
             if (fr.ShowDialog() == DialogResult.OK) { }
             {
-                Persona persona = bss.ObtenerIdbss(IdPersonaSeleccionda);
+                Persona persona = bss.ObtenerIdBss(IdPersonaSeleccionada);
                 textBox1.Text = persona.Nombre + " " + persona.Apellido;
             }
         }
@@ -48,7 +48,7 @@ namespace SistemasVentas.VISTA.UsuarioVistas
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
             Usuario usuario = new Usuario();
-            usuario.IdPersona=IdPersonaSeleccionda;
+            usuario.IdPersona=IdPersonaSeleccionada;
             usuario.NombreUser = textBox2.Text;
             usuario.Contraeña = textBox3.Text;
             usuario.Fecha = dateTimePicker1.Value;
