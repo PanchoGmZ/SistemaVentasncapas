@@ -15,7 +15,7 @@ namespace SistemasVentas.DAL
         public DataTable ListaRolDal()
         {
             string consulta = "select * from rol";
-            DataTable lista = conexion.EjecutarDataTabla(consulta, "Rol");
+            DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return lista;
         }
    
@@ -35,7 +35,6 @@ namespace SistemasVentas.DAL
             {
                 rol.IdRol = Convert.ToInt32(tabla.Rows[0]["idrol"]);
                 rol.Nombre = tabla.Rows[0]["nombre"].ToString();
-                rol.Estado = tabla.Rows[0]["estado"].ToString();
             }
             return rol;
 

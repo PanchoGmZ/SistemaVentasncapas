@@ -28,53 +28,85 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNombreRol = new System.Windows.Forms.TextBox();
-            this.GuardarBtn = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            label1 = new Label();
+            txtNombreRol = new TextBox();
+            GuardarBtn = new Button();
+            label2 = new Label();
+            textBox1 = new TextBox();
+            button1 = new Button();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(36, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(35, 117);
+            label1.Name = "label1";
+            label1.Size = new Size(68, 21);
+            label1.TabIndex = 0;
+            label1.Text = "Nombre";
             // 
             // txtNombreRol
             // 
-            this.txtNombreRol.Location = new System.Drawing.Point(122, 79);
-            this.txtNombreRol.Name = "txtNombreRol";
-            this.txtNombreRol.Size = new System.Drawing.Size(282, 23);
-            this.txtNombreRol.TabIndex = 1;
-            this.txtNombreRol.TextChanged += new System.EventHandler(this.txtNombreRol_TextChanged_1);
+            txtNombreRol.Location = new Point(121, 119);
+            txtNombreRol.Name = "txtNombreRol";
+            txtNombreRol.Size = new Size(282, 23);
+            txtNombreRol.TabIndex = 1;
+            txtNombreRol.TextChanged += txtNombreRol_TextChanged_1;
             // 
             // GuardarBtn
             // 
-            this.GuardarBtn.Location = new System.Drawing.Point(161, 133);
-            this.GuardarBtn.Name = "GuardarBtn";
-            this.GuardarBtn.Size = new System.Drawing.Size(110, 39);
-            this.GuardarBtn.TabIndex = 2;
-            this.GuardarBtn.Text = "Guardar";
-            this.GuardarBtn.UseVisualStyleBackColor = true;
-            this.GuardarBtn.Click += new System.EventHandler(this.GuardarBtn_Click);
+            GuardarBtn.Location = new Point(183, 178);
+            GuardarBtn.Name = "GuardarBtn";
+            GuardarBtn.Size = new Size(110, 39);
+            GuardarBtn.TabIndex = 2;
+            GuardarBtn.Text = "Guardar";
+            GuardarBtn.UseVisualStyleBackColor = true;
+            GuardarBtn.Click += GuardarBtn_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(35, 50);
+            label2.Name = "label2";
+            label2.Size = new Size(33, 21);
+            label2.TabIndex = 3;
+            label2.Text = "Rol";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(121, 52);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(153, 23);
+            textBox1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(293, 50);
+            button1.Name = "button1";
+            button1.Size = new Size(110, 25);
+            button1.TabIndex = 5;
+            button1.Text = "Seleccionar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // RolInsertarVista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 288);
-            this.Controls.Add(this.GuardarBtn);
-            this.Controls.Add(this.txtNombreRol);
-            this.Controls.Add(this.label1);
-            this.Name = "RolInsertarVista";
-            this.Text = "RolInsertarVista";
-            this.Load += new System.EventHandler(this.RolInsertarVista_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(466, 288);
+            Controls.Add(button1);
+            Controls.Add(textBox1);
+            Controls.Add(label2);
+            Controls.Add(GuardarBtn);
+            Controls.Add(txtNombreRol);
+            Controls.Add(label1);
+            Name = "RolInsertarVista";
+            Text = "RolInsertarVista";
+            Load += RolInsertarVista_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -82,5 +114,8 @@
         private Label label1;
         private TextBox txtNombreRol;
         private Button GuardarBtn;
+        private Label label2;
+        private TextBox textBox1;
+        private Button button1;
     }
 }
