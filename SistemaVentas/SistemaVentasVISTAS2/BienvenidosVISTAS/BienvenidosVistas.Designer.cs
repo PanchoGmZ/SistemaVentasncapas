@@ -29,99 +29,100 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BienvenidosVistas));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.SuspendLayout();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            pictureBox2 = new PictureBox();
+            button1 = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(214, 147);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 32);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Bienvenido";
+            label1.AutoSize = true;
+            label1.Font = new Font("Verdana", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(214, 147);
+            label1.Name = "label1";
+            label1.Size = new Size(162, 32);
+            label1.TabIndex = 1;
+            label1.Text = "Bienvenido";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(58, 211);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Usuario";
+            label2.AutoSize = true;
+            label2.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(58, 211);
+            label2.Name = "label2";
+            label2.Size = new Size(70, 18);
+            label2.TabIndex = 2;
+            label2.Text = "Usuario";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(58, 259);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 18);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Contraseña";
+            label3.AutoSize = true;
+            label3.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(58, 259);
+            label3.Name = "label3";
+            label3.Size = new Size(101, 18);
+            label3.TabIndex = 3;
+            label3.Text = "Contraseña";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(183, 211);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 23);
-            this.textBox1.TabIndex = 4;
+            textBox1.Location = new Point(183, 211);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(346, 23);
+            textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(183, 254);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(346, 23);
-            this.textBox2.TabIndex = 5;
+            textBox2.Location = new Point(183, 254);
+            textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '*';
+            textBox2.Size = new Size(346, 23);
+            textBox2.TabIndex = 5;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(227, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(137, 132);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox2.Location = new Point(227, 12);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(137, 132);
+            pictureBox2.TabIndex = 7;
+            pictureBox2.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(231, 307);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 37);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Iniciar Sesión";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.Location = new Point(231, 307);
+            button1.Name = "button1";
+            button1.Size = new Size(133, 37);
+            button1.TabIndex = 8;
+            button1.Text = "Iniciar Sesión";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // BienvenidosVistas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(584, 376);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "BienvenidosVistas";
-            this.Text = "BienvenidosVistas";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlLightLight;
+            ClientSize = new Size(584, 376);
+            Controls.Add(button1);
+            Controls.Add(pictureBox2);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Name = "BienvenidosVistas";
+            Text = "BienvenidosVistas";
+            Load += BienvenidosVistas_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

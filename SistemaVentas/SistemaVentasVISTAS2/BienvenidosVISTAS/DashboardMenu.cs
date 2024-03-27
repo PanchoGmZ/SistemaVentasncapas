@@ -16,5 +16,28 @@ namespace SistemaVentasVISTAS2.BienvenidosVISTAS
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UsuarioDVistas abrir = new UsuarioDVistas();
+            abrir.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProductosDVistas abrirs = new ProductosDVistas();
+            abrirs.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ClienteDVistas abrir = new ClienteDVistas();
+            abrir.Show();
+        }
     }
 }

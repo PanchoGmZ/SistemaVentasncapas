@@ -1,6 +1,6 @@
 ﻿namespace SistemaVentasVISTAS2.BienvenidosVISTAS
 {
-    partial class UsuarioDVistas
+    partial class ClienteDVistas
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuarioDVistas));
-            panel1 = new Panel();
-            button5 = new Button();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClienteDVistas));
             label1 = new Label();
             panel2 = new Panel();
             button9 = new Button();
@@ -44,84 +38,16 @@
             textBox1 = new TextBox();
             button6 = new Button();
             label2 = new Label();
-            panel1.SuspendLayout();
+            panel1 = new Panel();
+            button5 = new Button();
+            button4 = new Button();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.SeaGreen;
-            panel1.BorderStyle = BorderStyle.Fixed3D;
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(163, 450);
-            panel1.TabIndex = 1;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.MediumSeaGreen;
-            button5.BackgroundImage = Properties.Resources.objetivo;
-            button5.BackgroundImageLayout = ImageLayout.Zoom;
-            button5.FlatStyle = FlatStyle.Popup;
-            button5.Location = new Point(15, 346);
-            button5.Name = "button5";
-            button5.Size = new Size(129, 57);
-            button5.TabIndex = 4;
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.MediumSeaGreen;
-            button4.BackgroundImage = Properties.Resources.repartidor;
-            button4.BackgroundImageLayout = ImageLayout.Zoom;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Location = new Point(15, 262);
-            button4.Name = "button4";
-            button4.Size = new Size(129, 57);
-            button4.TabIndex = 3;
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.MediumSeaGreen;
-            button3.BackgroundImage = Properties.Resources.carrito_de_compras;
-            button3.BackgroundImageLayout = ImageLayout.Zoom;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Location = new Point(15, 179);
-            button3.Name = "button3";
-            button3.Size = new Size(129, 57);
-            button3.TabIndex = 2;
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.MediumSeaGreen;
-            button2.BackgroundImage = Properties.Resources.proteccion;
-            button2.BackgroundImageLayout = ImageLayout.Zoom;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Location = new Point(15, 95);
-            button2.Name = "button2";
-            button2.Size = new Size(129, 57);
-            button2.TabIndex = 1;
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.MediumSeaGreen;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Zoom;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(15, 18);
-            button1.Name = "button1";
-            button1.Size = new Size(129, 57);
-            button1.TabIndex = 0;
-            button1.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -129,11 +55,11 @@
             label1.FlatStyle = FlatStyle.System;
             label1.Font = new Font("Verdana", 26.25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.SeaGreen;
-            label1.Location = new Point(169, 9);
+            label1.Location = new Point(172, 11);
             label1.Name = "label1";
-            label1.Size = new Size(189, 42);
-            label1.TabIndex = 4;
-            label1.Text = "Usuarios";
+            label1.Size = new Size(175, 42);
+            label1.TabIndex = 7;
+            label1.Text = "Clientes";
             // 
             // panel2
             // 
@@ -145,10 +71,10 @@
             panel2.Controls.Add(textBox1);
             panel2.Controls.Add(button6);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(169, 54);
+            panel2.Location = new Point(172, 56);
             panel2.Name = "panel2";
             panel2.Size = new Size(603, 396);
-            panel2.TabIndex = 3;
+            panel2.TabIndex = 6;
             // 
             // button9
             // 
@@ -220,9 +146,8 @@
             button6.Name = "button6";
             button6.Size = new Size(176, 30);
             button6.TabIndex = 6;
-            button6.Text = "+ Agregar Usuario";
+            button6.Text = "+ Agregar Cliente";
             button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
             // 
             // label2
             // 
@@ -236,42 +161,115 @@
             label2.TabIndex = 5;
             label2.Text = "Usuario: Admin";
             // 
-            // UsuarioDVistas
+            // panel1
+            // 
+            panel1.BackColor = Color.SeaGreen;
+            panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(button5);
+            panel1.Controls.Add(button4);
+            panel1.Controls.Add(button3);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(button1);
+            panel1.Location = new Point(3, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(163, 450);
+            panel1.TabIndex = 5;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.MediumSeaGreen;
+            button5.BackgroundImage = Properties.Resources.objetivo;
+            button5.BackgroundImageLayout = ImageLayout.Zoom;
+            button5.FlatStyle = FlatStyle.Popup;
+            button5.Location = new Point(15, 346);
+            button5.Name = "button5";
+            button5.Size = new Size(129, 57);
+            button5.TabIndex = 4;
+            button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.MediumSeaGreen;
+            button4.BackgroundImage = Properties.Resources.repartidor;
+            button4.BackgroundImageLayout = ImageLayout.Zoom;
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.Location = new Point(15, 262);
+            button4.Name = "button4";
+            button4.Size = new Size(129, 57);
+            button4.TabIndex = 3;
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.MediumSeaGreen;
+            button3.BackgroundImage = Properties.Resources.carrito_de_compras;
+            button3.BackgroundImageLayout = ImageLayout.Zoom;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Location = new Point(15, 179);
+            button3.Name = "button3";
+            button3.Size = new Size(129, 57);
+            button3.TabIndex = 2;
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.MediumSeaGreen;
+            button2.BackgroundImage = Properties.Resources.proteccion;
+            button2.BackgroundImageLayout = ImageLayout.Zoom;
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Location = new Point(15, 95);
+            button2.Name = "button2";
+            button2.Size = new Size(129, 57);
+            button2.TabIndex = 1;
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.MediumSeaGreen;
+            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImageLayout = ImageLayout.Zoom;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Location = new Point(15, 18);
+            button1.Name = "button1";
+            button1.Size = new Size(129, 57);
+            button1.TabIndex = 0;
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // ClienteDVistas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(780, 448);
+            ClientSize = new Size(775, 454);
             Controls.Add(label1);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "UsuarioDVistas";
-            Text = "UsuarioDVistas";
-            Load += UsuarioDVistas_Load;
-            panel1.ResumeLayout(false);
+            Name = "ClienteDVistas";
+            Text = "ClienteDVistas";
+            Load += ClienteDVistas_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
+        private Label label1;
+        private Panel panel2;
+        private Button button9;
+        private Button button8;
+        private Button button7;
+        private DataGridView dataGridView1;
+        private TextBox textBox1;
+        private Button button6;
+        private Label label2;
         private Panel panel1;
         private Button button5;
         private Button button4;
         private Button button3;
         private Button button2;
         private Button button1;
-        private Label label1;
-        private Panel panel2;
-        private Label label2;
-        private DataGridView dataGridView1;
-        private TextBox textBox1;
-        private Button button6;
-        private Button button9;
-        private Button button8;
-        private Button button7;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,27 @@ namespace SistemaVentasVISTAS2.BienvenidosVISTAS
         public BienvenidosVistas()
         {
             InitializeComponent();
+        }
+
+        private void BienvenidosVistas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string usuario = textBox1.Text;
+            string contraseña = textBox2.Text;
+
+            if (conexion.VerificarCredenciales(usuario, contraseña))
+            {
+                DashboardMenu abrir = new DashboardMenu();
+                abrir.Show();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos");
+            }
         }
     }
 }

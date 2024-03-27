@@ -60,6 +60,21 @@ namespace DAL
             da.Fill(dt);
             return dt;
         }
+        public static bool VerificarCredenciales(string usuario, string contraseña)
+        {
+            string consulta = "SELECT COUNT(1) FROM usuario WHERE nombreuser = @Usuario AND contraseña = @Contraseña";
+
+            using (SqlConnection conectar = new SqlConnection(CONECTAR))
+            {
+                conectar.Open();
+                SqlCommand cmd = new SqlCommand(consulta, conectar);
+                cmd.Parameters.AddWithValue("@Usuario", usuario);
+                cmd.Parameters.AddWithValue("@Contraseña", contraseña);
+
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count == 1;
+            }
+        }
     }
 }
 

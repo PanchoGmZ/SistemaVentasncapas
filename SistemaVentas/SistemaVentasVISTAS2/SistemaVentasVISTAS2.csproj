@@ -9,6 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SistemasVentas.BSS\SistemasVentas.BSS.csproj" />
+    <ProjectReference Include="..\SistemasVentas.Modelos\SistemasVentas.Modelos.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
