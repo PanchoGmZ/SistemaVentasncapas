@@ -16,5 +16,11 @@ namespace SistemaVentasVISTAS2.BienvenidosVISTAS
         {
             InitializeComponent();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SeleccionarClienteDVistas abrir = new SeleccionarClienteDVistas();
+            abrir.Show();
+        }
     }
 }

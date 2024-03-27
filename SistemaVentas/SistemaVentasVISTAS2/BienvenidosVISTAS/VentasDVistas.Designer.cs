@@ -121,6 +121,7 @@
             button6.TabIndex = 6;
             button6.Text = "Seleccionar Cliente";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // label2
             // 

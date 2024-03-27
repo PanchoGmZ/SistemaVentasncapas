@@ -31,7 +31,8 @@ namespace SistemaVentasVISTAS2.BienvenidosVISTAS
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            VentasDVistas abrir = new VentasDVistas();
+            abrir.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
