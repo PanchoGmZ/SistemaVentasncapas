@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemasVentas.BSS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,11 +17,16 @@ namespace SistemaVentasVISTAS2.BienvenidosVISTAS
         {
             InitializeComponent();
         }
-
+        VentaBss bss = new VentaBss();
         private void button6_Click(object sender, EventArgs e)
         {
             SeleccionarClienteDVistas abrir = new SeleccionarClienteDVistas();
             abrir.Show();
+        }
+
+        private void VentasDVistas_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource=bss.ListarVentaDatosBss();
         }
     }
 }

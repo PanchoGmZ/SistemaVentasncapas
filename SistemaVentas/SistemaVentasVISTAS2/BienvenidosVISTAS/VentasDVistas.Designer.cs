@@ -219,6 +219,7 @@
             Controls.Add(panel1);
             Name = "VentasDVistas";
             Text = "VentasDVistas";
+            Load += VentasDVistas_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

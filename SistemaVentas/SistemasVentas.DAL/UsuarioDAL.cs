@@ -27,5 +27,15 @@ namespace SistemasVentas.DAL
             conexion.Ejecutar(consulta);
 
         }
+        public DataTable ListarUsuarioDatosDal()
+        {
+            string consulta = "SELECT USUARIO.IDUSUARIO, (PERSONA.NOMBRE+' '+PERSONA.APELLIDO) NOMBRECOMPLETO, USUARIO.NOMBREUSER, " +
+                              "ROL.NOMBRE AS NOMBREROL, USUARIOROL.FECHAASIGNA " +
+                              "FROM  PERSONA INNER JOIN " +
+                         "USUARIO ON PERSONA.IDPERSONA = USUARIO.IDPERSONA INNER JOIN " +
+                         "USUARIOROL ON USUARIO.IDUSUARIO = USUARIOROL.IDUSUARIO INNER JOIN " +
+                         "ROL ON USUARIOROL.IDROL = ROL.IDROL";
+            return conexion.EjecutarDataTabla(consulta, "fsdf");
+        }
     }
 }

@@ -15,5 +15,9 @@ namespace SistemasVentas.BSS
         {
             return dal.ListarVentaDal();
         }
+        public DataTable ListarVentaDatosBss()
+        {
+            return dal.ListarVentasDatosDal();
+        }
     }
 }

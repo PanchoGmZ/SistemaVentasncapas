@@ -32,6 +32,10 @@ namespace SistemasVentas.BSS
         {
             dal.EliminarClienteDal (id);
         }
+        public DataTable ListarClienteDatosBss ()
+        {
+           return  dal.ListarClienteDatosDal();
+        }
     }
 }
 

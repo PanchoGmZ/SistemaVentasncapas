@@ -20,7 +20,7 @@ namespace SistemaVentasVISTAS2.BienvenidosVISTAS
         ProductoBss bss = new ProductoBss();
         private void ProductosDVistas_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bss.ListarProductoBss();
+            dataGridView1.DataSource = bss.ListarProdDatosBss();
         }
 
         private void button6_Click(object sender, EventArgs e)
