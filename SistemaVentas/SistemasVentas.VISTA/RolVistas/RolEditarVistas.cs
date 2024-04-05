@@ -26,7 +26,7 @@ namespace SistemasVentas.VISTA.RolVistas
 
         private void RolEditarVistas_Load(object sender, EventArgs e)
         {
-            rol = bss.ObtenerROlbss(idx);
+            rol = bss.ObtenerRolIdBss(idx);
             txtNombre.Text = rol.Nombre;
 
         }

@@ -16,5 +16,10 @@ namespace SistemaVentasVISTAS2.BienvenidosVISTAS
         {
             InitializeComponent();
         }
+
+        private void AgregarUsuarioDVista_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

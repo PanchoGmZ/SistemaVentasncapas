@@ -12,17 +12,33 @@ namespace SistemasVentas.BSS
     public class UsuarioBss
     {
         UsuarioDAL dal = new UsuarioDAL();
-        public DataTable ListarUsuariosBss()
+        public DataTable ListarUsuarioBss()
         {
             return dal.ListarUsuariosDal();
         }
-        public void InsertarUsuarioBss(Usuario usuario)
+        public void InsertarUsuarioBss(Usuario u)
         {
-            dal.InsertarUsuarioDal(usuario);
+            dal.InsertarUsuariosDal(u);
         }
-        public DataTable UsuariodatosBss()
+
+        public Usuario ObtenerUsuarioIdBss(int id)
         {
-            return dal.ListarUsuarioDatosDal();
+            return dal.ObtenerUsuariosIdDal(id);
+        }
+
+        public void EditarUsuariosBss(Usuario u)
+        {
+            dal.EditarUsuariosDal(u);
+        }
+
+        public void EliminarUsuariosBss(int id)
+        {
+            dal.EliminarUsuariosDal(id);
+        }
+
+        public DataTable UsuarioDatosBss()
+        {
+            return dal.UsuarioDatosDal();
         }
     }
 }

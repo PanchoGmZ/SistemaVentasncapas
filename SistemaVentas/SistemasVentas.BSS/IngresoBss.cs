@@ -1,4 +1,5 @@
 ﻿using SistemasVentas.DAL;
+using SistemasVentas.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,6 +16,29 @@ namespace SistemasVentas.BSS
         {
             return dal.ListarIngresoDal();
         }
+        public void InsertarIngresosBss(Ingreso ingreso)
+        {
+            dal.InsertarIngresoDAL(ingreso);
+        }
+
+        public Ingreso ObtenerIngresosIdBss(int id)
+        {
+            return dal.ObtenerIngresoIdDal(id);
+        }
+        public void EditarIngresosBss(Ingreso p)
+        {
+            dal.EditarIngresoDal(p);
+        }
+        public void EliminarIngresosBss(int id)
+        {
+            dal.EliminarIngresoDal(id);
+        }
+
+        public DataTable IngresoDatosBSS()
+        {
+            return dal.IngresoDatosDal();
+        }
+
     }
 }
 

@@ -23,7 +23,7 @@ namespace SistemasVentas.VISTA.TipoProdVistas
         {
             TipoProducto p = new TipoProducto();
             p.Nombre = txtNombre.Text;
-            bss.InsertarTipoProductoBss(p);
+            bss.InsertarTipoProdBss(p);
             MessageBox.Show("Se guardo exitosamente");
         }
     }

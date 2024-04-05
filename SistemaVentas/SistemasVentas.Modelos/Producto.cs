@@ -13,7 +13,7 @@ namespace SistemasVentas.Modelos
         public int IdMarca { get; set; }
         public string Nombre { get; set; }
         public string CodigoBarras { get; set; }
-        public string Unidad { get; set; }
+        public int Unidad { get; set; }
         public string Descripcion { get; set; }
         public string Estado { get; set; }
 

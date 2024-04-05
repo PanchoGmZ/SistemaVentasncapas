@@ -16,26 +16,31 @@ namespace SistemasVentas.BSS
         {
             return dal.ListarClienteDal();
         }
+
         public void InsertarClienteBss(Cliente cliente)
         {
-            dal.InsertarClienteDal(cliente);
+            dal.InsertarClienteDAL(cliente);
         }
-        public Cliente ObtenerIdClienteBss(int id)
+
+        public Cliente ObtenerClienteIdBss(int id)
         {
-            return dal.ObtenerClienteId(id);
+            return dal.ObtenerClienteIdDal(id);
         }
-        public void EditarClienteBss (Cliente cliente)
+
+        public void EditarClienteBss(Cliente clientes)
         {
-            dal.EditarClienteDal(cliente);
+            dal.EditarClienteDal(clientes);
         }
-        public void EliminarClienteBss (int id)
+        public void EliminarClienteBss(int id)
         {
-            dal.EliminarClienteDal (id);
+            dal.EliminarClienteDal(id);
         }
-        public DataTable ListarClienteDatosBss ()
+
+        public DataTable ListarClienteDatosBss()
         {
-           return  dal.ListarClienteDatosDal();
+            return dal.ClienteDatosDal();
         }
+
     }
 }
 

@@ -28,173 +28,125 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            button6 = new Button();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button6 = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.FlatStyle = FlatStyle.System;
-            label1.Font = new Font("Verdana", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.SeaGreen;
-            label1.Location = new Point(12, 18);
-            label1.Name = "label1";
-            label1.Size = new Size(260, 32);
-            label1.TabIndex = 5;
-            label1.Text = "Agregar Usuario";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.FlatStyle = FlatStyle.System;
-            label2.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.SeaGreen;
-            label2.Location = new Point(12, 82);
-            label2.Name = "label2";
-            label2.Size = new Size(78, 18);
-            label2.TabIndex = 6;
-            label2.Text = "Nombre";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.FlatStyle = FlatStyle.System;
-            label3.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.SeaGreen;
-            label3.Location = new Point(12, 130);
-            label3.Name = "label3";
-            label3.Size = new Size(76, 18);
-            label3.TabIndex = 7;
-            label3.Text = "Apellido";
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label1.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(260, 32);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Agregar Usuario";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.FlatStyle = FlatStyle.System;
-            label4.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.SeaGreen;
-            label4.Location = new Point(12, 177);
-            label4.Name = "label4";
-            label4.Size = new Size(177, 18);
-            label4.TabIndex = 8;
-            label4.Text = "Nombre de Usuario";
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label4.Location = new System.Drawing.Point(12, 92);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(177, 18);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Nombre de Usuario";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.FlatStyle = FlatStyle.System;
-            label5.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.SeaGreen;
-            label5.Location = new Point(12, 224);
-            label5.Name = "label5";
-            label5.Size = new Size(110, 18);
-            label5.TabIndex = 9;
-            label5.Text = "Contraseña";
+            this.label5.AutoSize = true;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label5.Location = new System.Drawing.Point(12, 139);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(110, 18);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Contraseña";
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.FlatStyle = FlatStyle.System;
-            label6.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.SeaGreen;
-            label6.Location = new Point(12, 271);
-            label6.Name = "label6";
-            label6.Size = new Size(166, 18);
-            label6.TabIndex = 10;
-            label6.Text = "Fecha de Registro";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(12, 103);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(317, 23);
-            textBox1.TabIndex = 11;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(12, 151);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(317, 23);
-            textBox2.TabIndex = 12;
+            this.label6.AutoSize = true;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label6.Location = new System.Drawing.Point(12, 186);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(166, 18);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Fecha de Registro";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(12, 198);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(317, 23);
-            textBox3.TabIndex = 13;
+            this.textBox3.Location = new System.Drawing.Point(12, 113);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(317, 23);
+            this.textBox3.TabIndex = 13;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(12, 245);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(317, 23);
-            textBox4.TabIndex = 14;
+            this.textBox4.Location = new System.Drawing.Point(12, 160);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(317, 23);
+            this.textBox4.TabIndex = 14;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(14, 298);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(315, 23);
-            dateTimePicker1.TabIndex = 15;
+            this.dateTimePicker1.Location = new System.Drawing.Point(14, 213);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(315, 23);
+            this.dateTimePicker1.TabIndex = 15;
             // 
             // button6
             // 
-            button6.BackColor = Color.PaleTurquoise;
-            button6.BackgroundImageLayout = ImageLayout.Zoom;
-            button6.FlatStyle = FlatStyle.Popup;
-            button6.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.Location = new Point(85, 352);
-            button6.Name = "button6";
-            button6.Size = new Size(176, 30);
-            button6.TabIndex = 16;
-            button6.Text = "Agregar Usuario";
-            button6.UseVisualStyleBackColor = false;
+            this.button6.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button6.Location = new System.Drawing.Point(73, 282);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(176, 30);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "Agregar Usuario";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // AgregarUsuarioDVista
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(368, 410);
-            Controls.Add(button6);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Name = "AgregarUsuarioDVista";
-            Text = "AgregarUsuarioDVista";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(368, 332);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label1);
+            this.Name = "AgregarUsuarioDVista";
+            this.Text = "AgregarUsuarioDVista";
+            this.Load += new System.EventHandler(this.AgregarUsuarioDVista_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
         private Label label1;
-        private Label label2;
-        private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textBox1;
-        private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
         private DateTimePicker dateTimePicker1;

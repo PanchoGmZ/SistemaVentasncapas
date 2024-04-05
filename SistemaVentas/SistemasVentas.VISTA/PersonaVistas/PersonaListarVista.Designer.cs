@@ -28,81 +28,116 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            btn_Seleccionar = new Button();
-            Agregar_btn = new Button();
-            editar_btn = new Button();
-            eliminar_btn = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_Seleccionar = new System.Windows.Forms.Button();
+            this.Agregar_btn = new System.Windows.Forms.Button();
+            this.editar_btn = new System.Windows.Forms.Button();
+            this.eliminar_btn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 12);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(529, 331);
-            dataGridView1.TabIndex = 0;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(263, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(529, 331);
+            this.dataGridView1.TabIndex = 0;
             // 
             // btn_Seleccionar
             // 
-            btn_Seleccionar.Location = new Point(431, 359);
-            btn_Seleccionar.Name = "btn_Seleccionar";
-            btn_Seleccionar.Size = new Size(110, 29);
-            btn_Seleccionar.TabIndex = 1;
-            btn_Seleccionar.Text = "Seleccionar";
-            btn_Seleccionar.UseVisualStyleBackColor = true;
-            btn_Seleccionar.Click += btn_Seleccionar_Click;
+            this.btn_Seleccionar.Location = new System.Drawing.Point(665, 373);
+            this.btn_Seleccionar.Name = "btn_Seleccionar";
+            this.btn_Seleccionar.Size = new System.Drawing.Size(110, 29);
+            this.btn_Seleccionar.TabIndex = 1;
+            this.btn_Seleccionar.Text = "Seleccionar";
+            this.btn_Seleccionar.UseVisualStyleBackColor = true;
             // 
             // Agregar_btn
             // 
-            Agregar_btn.Location = new Point(29, 359);
-            Agregar_btn.Name = "Agregar_btn";
-            Agregar_btn.Size = new Size(114, 29);
-            Agregar_btn.TabIndex = 2;
-            Agregar_btn.Text = "Agregar";
-            Agregar_btn.UseVisualStyleBackColor = true;
-            Agregar_btn.Click += Agregar_btn_Click;
+            this.Agregar_btn.Location = new System.Drawing.Point(263, 373);
+            this.Agregar_btn.Name = "Agregar_btn";
+            this.Agregar_btn.Size = new System.Drawing.Size(114, 29);
+            this.Agregar_btn.TabIndex = 2;
+            this.Agregar_btn.Text = "Agregar";
+            this.Agregar_btn.UseVisualStyleBackColor = true;
             // 
             // editar_btn
             // 
-            editar_btn.Location = new Point(162, 359);
-            editar_btn.Name = "editar_btn";
-            editar_btn.Size = new Size(114, 29);
-            editar_btn.TabIndex = 3;
-            editar_btn.Text = "Editar";
-            editar_btn.UseVisualStyleBackColor = true;
-            editar_btn.Click += editar_btn_Click;
+            this.editar_btn.Location = new System.Drawing.Point(396, 373);
+            this.editar_btn.Name = "editar_btn";
+            this.editar_btn.Size = new System.Drawing.Size(114, 29);
+            this.editar_btn.TabIndex = 3;
+            this.editar_btn.Text = "Editar";
+            this.editar_btn.UseVisualStyleBackColor = true;
             // 
             // eliminar_btn
             // 
-            eliminar_btn.Location = new Point(295, 359);
-            eliminar_btn.Name = "eliminar_btn";
-            eliminar_btn.Size = new Size(114, 29);
-            eliminar_btn.TabIndex = 4;
-            eliminar_btn.Text = "Eliminar";
-            eliminar_btn.UseVisualStyleBackColor = true;
-            eliminar_btn.Click += eliminar_btn_Click;
+            this.eliminar_btn.Location = new System.Drawing.Point(529, 373);
+            this.eliminar_btn.Name = "eliminar_btn";
+            this.eliminar_btn.Size = new System.Drawing.Size(114, 29);
+            this.eliminar_btn.TabIndex = 4;
+            this.eliminar_btn.Text = "Eliminar";
+            this.eliminar_btn.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(234, 468);
+            this.panel1.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.LightGreen;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Location = new System.Drawing.Point(3, 135);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(233, 105);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Listar y Modificar Vistas";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.LightGreen;
+            this.label1.Location = new System.Drawing.Point(0, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(243, 59);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Persona";
             // 
             // PersonaListarVista
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(558, 400);
-            Controls.Add(eliminar_btn);
-            Controls.Add(editar_btn);
-            Controls.Add(Agregar_btn);
-            Controls.Add(btn_Seleccionar);
-            Controls.Add(dataGridView1);
-            Name = "PersonaListarVista";
-            Text = "PersonaListarVista";
-            Load += PersonaListarVista_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(813, 429);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.eliminar_btn);
+            this.Controls.Add(this.editar_btn);
+            this.Controls.Add(this.Agregar_btn);
+            this.Controls.Add(this.btn_Seleccionar);
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "PersonaListarVista";
+            this.Text = "PersonaListarVista";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -112,5 +147,8 @@
         private Button Agregar_btn;
         private Button editar_btn;
         private Button eliminar_btn;
+        private Panel panel1;
+        private Label label2;
+        private Label label1;
     }
 }

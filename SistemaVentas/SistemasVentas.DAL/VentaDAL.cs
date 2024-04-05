@@ -1,4 +1,5 @@
 ﻿using DAL;
+using SistemasVentas.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,16 +11,63 @@ namespace SistemasVentas.DAL
 {
     public class VentaDAL
     {
-        public DataTable ListarVentaDal()
+        public DataTable ListarVentasDal()
         {
             string consulta = "select * from venta";
-            DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
-            return lista;
+            DataTable Lista = conexion.EjecutarDataTabla(consulta, "tabla");
+            return Lista;
         }
-        public DataTable ListarVentasDatosDal()
+
+        public void InsertarVentaDAL(Venta v)
         {
-            string consulta = "SELECT VENTA.IDVENTA, CLIENTE.CODIGOCLIENTE, USUARIO.NOMBREUSER, VENTA.FECHA, VENTA.TOTAL, VENTA.ESTADO\r\nFROM            VENTA INNER JOIN\r\n                         CLIENTE ON VENTA.IDCLIENTE = CLIENTE.IDCLIENTE INNER JOIN\r\n                         USUARIO ON VENTA.IDVENDEDOR = USUARIO.IDUSUARIO INNER JOIN\r\n                         USUARIOROL ON USUARIO.IDUSUARIO = USUARIOROL.IDUSUARIO";
+            string consulta = "insert into venta values(" + v.IdCliente + "," +
+                                                          "" + v.IdVendedor + "," +
+                                                          "'" + v.Fecha + "'," +
+                                                          "'" + v.Total + "'," +
+                                                          "'Exitoso')";
+            conexion.Ejecutar(consulta);
+        }
+
+        public Venta ObtenerVentaIdDal(int id)
+        {
+            string consulta = "select * from venta where idventa=" + id;
+            DataTable tabla = conexion.EjecutarDataTabla(consulta, "asdas");
+            Venta v = new Venta();
+            if (tabla.Rows.Count > 0)
+            {
+                v.IdVenta = Convert.ToInt32(tabla.Rows[0]["idventa"]);
+                v.IdCliente = Convert.ToInt32(tabla.Rows[0]["idcliente"]);
+                v.Fecha = Convert.ToDateTime(tabla.Rows[0]["fecha"]);
+                v.Total = Convert.ToInt32(tabla.Rows[0]["idventa"]);
+                v.Estado = tabla.Rows[0]["estado"].ToString();
+            }
+            return v;
+
+        }
+        public void EditarVentaDal(Venta v)
+        {
+            string consulta = "update venta set idcliente=" + v.IdCliente + "," +
+                                                        "idvendedor=" + v.IdVendedor + "," +
+                                                        "fecha='" + v.Fecha + "', " +
+                                                        "total=" + v.Total + "," +
+                                                        "estado='" + v.Estado + "' " +
+                                                "where idventa=" + v.IdVenta;
+            conexion.Ejecutar(consulta);
+        }
+        public void EliminarVentaDal(int id)
+        {
+            string consulta = "delete from venta where idventa=" + id;
+            conexion.Ejecutar(consulta);
+        }
+        public DataTable VentaDatosDal()
+        {
+            string consulta = " SELECT CLIENTE.TIPOCLIENTE, USUARIO.NOMBREUSER, VENTA.TOTAL, VENTA.FECHA " +
+                               " FROM VENTA INNER JOIN " +
+                               " CLIENTE ON VENTA.IDCLIENTE = CLIENTE.IDCLIENTE INNER JOIN" +
+                               "  USUARIO ON VENTA.IDVENDEDOR = USUARIO.IDUSUARIO ";
+
             return conexion.EjecutarDataTabla(consulta, "fsdf");
+
         }
     }
 }

@@ -22,7 +22,7 @@ namespace SistemasVentas.VISTA.MarcaVistas
         {
             Marca p = new Marca();
             p.Nombre = textBox1.Text;
-            bss.InsertarMarcaBss(p);
+            bss.InsertarMarcasBss(p);
             MessageBox.Show("Se guardó la nueva persona exitosamente");
         }
     }

@@ -48,7 +48,7 @@ namespace SistemasVentas.VISTA.RolVistas
             RolListarVista fr = new RolListarVista(); 
             if (fr.ShowDialog() == DialogResult.OK)
             {
-                ROL rol = bss.ObtenerROlbss(IdRolSeleccionada);
+                ROL rol = bss.ObtenerRolIdBss(IdRolSeleccionada);
                 textBox1.Text = rol.Nombre + " " + rol.IdRol;
             }
         }
