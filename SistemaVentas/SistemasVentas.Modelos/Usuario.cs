@@ -11,8 +11,7 @@ namespace SistemasVentas.Modelos
         public int IdUsuario { get; set; }
         public int IdPersona { get; set; }
         public string NombreUser { get; set; }
-        public string Contraeña { get; set; }
-        public DateTime Fecha { get; set; }
-
+        public string Contraseña { get; set; }
+        public DateTime FechaReg { get; set; }
     }
 }

@@ -11,34 +11,26 @@ namespace SistemasVentas.BSS
 {
     public class IngresoBss
     {
-        IngresoDAL dal = new IngresoDAL();
+        IngresoDal dal = new IngresoDal();
         public DataTable ListarIngresoBss()
         {
             return dal.ListarIngresoDal();
         }
-        public void InsertarIngresosBss(Ingreso ingreso)
+        public void InsertarIngresoBss(Ingreso ingreso)
         {
-            dal.InsertarIngresoDAL(ingreso);
+            dal.InsertarIngresoDal(ingreso);
         }
-
-        public Ingreso ObtenerIngresosIdBss(int id)
+        public Ingreso ObtenerIngresoIdBss(int id)
         {
             return dal.ObtenerIngresoIdDal(id);
         }
-        public void EditarIngresosBss(Ingreso p)
+        public void EditarIngresoBss(Ingreso ingreso)
         {
-            dal.EditarIngresoDal(p);
+            dal.EditarIngresoDal(ingreso);
         }
-        public void EliminarIngresosBss(int id)
+        public void EliminarIngresoBss(int id)
         {
             dal.EliminarIngresoDal(id);
         }
-
-        public DataTable IngresoDatosBSS()
-        {
-            return dal.IngresoDatosDal();
-        }
-
     }
 }
-

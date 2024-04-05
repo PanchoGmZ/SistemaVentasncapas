@@ -11,32 +11,26 @@ namespace SistemasVentas.BSS
 {
     public class DetalleIngBss
     {
-        DetalleIngDAL dal = new DetalleIngDAL();
-        public DataTable ListarDetalleingBss()
+        DetalleIngDal dal = new DetalleIngDal();
+        public DataTable ListarDetalleIngBss()
         {
-            return dal.ListarDetalleIngresoDal();
+            return dal.ListarDetalleIngDal();
         }
-
-        public void InsertarDetalleIngBss(DetalleIng DetalleIngreso)
+        public void InsertarDetalleIngBss(DetalleIng detalleing)
         {
-            dal.InsertarDetalleIngresoDAL(DetalleIngreso);
+            dal.InsertarDetalleIngDal(detalleing);
         }
         public DetalleIng ObtenerDetalleIngIdBss(int id)
         {
-            return dal.ObtenerDetalleIngresoIdDal(id);
+            return dal.ObtenerDetalleIngIdDal(id);
         }
-        public void EditarDetalleIngBss(DetalleIng detalleingreso)
+        public void EditarDetalleIngBss(DetalleIng detalleing)
         {
-            dal.EditarDetalleIngresoDal(detalleingreso);
+            dal.EditarDetalleIngDal(detalleing);
         }
-        public void EliminarDetalleIngresoBss(int id)
+        public void EliminarDetalleIngBss(int id)
         {
-            dal.EliminarDetalleIngresoDal(id);
-        }
-
-        public DataTable DetalleIngresoDatosBSS()
-        {
-            return dal.DetalleIngresoDatosDal();
+            dal.EliminarDetalleIngDal(id);
         }
     }
 }

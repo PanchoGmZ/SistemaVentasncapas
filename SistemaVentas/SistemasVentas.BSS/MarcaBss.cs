@@ -11,35 +11,26 @@ namespace SistemasVentas.BSS
 {
     public class MarcaBss
     {
-        MarcaDAL DAL = new MarcaDAL();
-        public DataTable ListarMarcasBss()
+        MarcaDal dal = new MarcaDal();
+        public DataTable ListarMarcaBss()
         {
-            return DAL.ListarMarcaDal();
+            return dal.ListarMarcaDal();
         }
-        public void InsertarMarcasBss(Marca marca)
+        public void InsertarMarcaBss(Marca marca)
         {
-            DAL.InsertarMarcaDAL(marca);
+            dal.InsertarMarcaDal(marca);
         }
-
         public Marca ObtenerMarcaIdBss(int id)
         {
-            return DAL.ObtenerMarcaIdDal(id);
+            return dal.ObtenerMarcaIdDal(id);
         }
-
-        public void EditarMarcaBss(Marca marcas)
+        public void EditarMarcaBss(Marca marca)
         {
-            DAL.EditarMarcaDal(marcas);
+            dal.EditarMarcaDal(marca);
         }
-
         public void EliminarMarcaBss(int id)
         {
-            DAL.EliminarMarcaDal(id);
-        }
-
-        public DataTable MarcaDatosBSS()
-        {
-            return DAL.MarcaDatosDal();
+            dal.EliminarMarcaDal(id);
         }
     }
 }
-

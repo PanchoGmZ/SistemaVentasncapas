@@ -1,5 +1,4 @@
-﻿using DAL;
-using SistemasVentas.Modelos;
+﻿using SistemasVentas.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,21 +8,20 @@ using System.Threading.Tasks;
 
 namespace SistemasVentas.DAL
 {
-    public class MarcaDAL
+    public class MarcaDal
     {
         public DataTable ListarMarcaDal()
         {
             string consulta = "select * from marca";
-            DataTable Lista = conexion.EjecutarDataTabla(consulta, "tabla");
-            return Lista;
+            DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
+            return lista;
         }
-        public void InsertarMarcaDAL(Marca mar)
+        public void InsertarMarcaDal(Marca marca)
         {
-            string consulta = "insert into marca values('" + mar.Nombre + "'," +
-                                                          "'Activo')";
+            string consulta = "insert into marca values('" + marca.Nombre + "'," + 
+                                                           "'" + marca.Estado +"')";
             conexion.Ejecutar(consulta);
         }
-
         public Marca ObtenerMarcaIdDal(int id)
         {
             string consulta = "select * from marca where idmarca=" + id;
@@ -36,29 +34,18 @@ namespace SistemasVentas.DAL
                 marca.Estado = tabla.Rows[0]["estado"].ToString();
             }
             return marca;
-
         }
-        public void EditarMarcaDal(Marca marcas)
+        public void EditarMarcaDal(Marca marca)
         {
-            string consulta = "update marca set nombre='" + marcas.Nombre + "'" +
-                                                        "where idmarca=" + marcas.IdMarca;
+            string consulta = "update marca set nombre='" + marca.Nombre + "'," +
+                                                        "estado='" + marca.Estado + "' " +
+                                                "where idmarca=" + marca.IdMarca;
             conexion.Ejecutar(consulta);
         }
-
         public void EliminarMarcaDal(int id)
         {
             string consulta = "delete from marca where idmarca=" + id;
             conexion.Ejecutar(consulta);
-        }
-
-        public DataTable MarcaDatosDal()
-        {
-            string consulta = " SELECT MARCA.NOMBRE, PRODUCTO.NOMBRE AS Expr1, PRODUCTO.CODIGOBARRA, PRODUCTO.UNIDAD" +
-                               " FROM MARCA INNER JOIN " +
-                               " PRODUCTO ON MARCA.IDMARCA = PRODUCTO.IDMARCA ";
-
-            return conexion.EjecutarDataTabla(consulta, "fsdf");
-
         }
     }
 }

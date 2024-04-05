@@ -1,5 +1,4 @@
-﻿using DAL;
-using SistemasVentas.Modelos;
+﻿using SistemasVentas.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,61 +8,54 @@ using System.Threading.Tasks;
 
 namespace SistemasVentas.DAL
 {
-    public class ClienteDAL
+    public class ClienteDal
     {
         public DataTable ListarClienteDal()
         {
-            string consulta = "select * from cliente";
-            DataTable Lista = conexion.EjecutarDataTabla(consulta, "tabla");
-            return Lista;
+            string consulta = "SELECT CLIENTE.IDCLIENTE, (PERSONA.NOMBRE +' '+ PERSONA.APELLIDO)NOMBRE_COMPLETO, " +
+                                    "CLIENTE.TIPOCLIENTE, CLIENTE.CODIGOCLIENTE, CLIENTE.ESTADO\r\n" +
+                                    "FROM     CLIENTE INNER JOIN\r\n" +
+                                    "PERSONA ON CLIENTE.IDPERSONA = PERSONA.IDPERSONA";
+            DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
+            return lista;
         }
-        public void InsertarClienteDAL(Cliente cliente)
+        public void InsertarClienteDal(Cliente cliente)
         {
             string consulta = "insert into cliente values(" + cliente.IdPersona + "," +
-                                                          "'" + cliente.TipoCliente + "'," +
-                                                          "'" + cliente.CodigoCliente + "'," +
-                                                          "'Activo')";
+                                                            "'" + cliente.TipoCliente + "'," +
+                                                            "'" + cliente.CodigoClie + "'," +
+                                                            "'" + cliente.Estado + "')";
             conexion.Ejecutar(consulta);
         }
-
         public Cliente ObtenerClienteIdDal(int id)
         {
             string consulta = "select * from cliente where idcliente=" + id;
             DataTable tabla = conexion.EjecutarDataTabla(consulta, "asdas");
-            Cliente clientes = new Cliente();
+            Cliente cliente = new Cliente();
             if (tabla.Rows.Count > 0)
             {
-                clientes.IdCliente = Convert.ToInt32(tabla.Rows[0]["idcliente"]);
-                clientes.IdPersona = Convert.ToInt32(tabla.Rows[0]["idpersona"]);
-                clientes.TipoCliente = tabla.Rows[0]["tipocliente"].ToString();
-                clientes.CodigoCliente = tabla.Rows[0]["codigocliente"].ToString();
-                clientes.Estado = tabla.Rows[0]["estado"].ToString();
-            }
-            return clientes;
+                cliente.IdCliente = Convert.ToInt32(tabla.Rows[0]["idcliente"]);
+                cliente.IdPersona = Convert.ToInt32(tabla.Rows[0]["idpersona"]);
+                cliente.TipoCliente = tabla.Rows[0]["tipocliente"].ToString();
+                cliente.CodigoClie = tabla.Rows[0]["codigocliente"].ToString();
+                cliente.Estado = tabla.Rows[0]["estado"].ToString();
 
+            }
+            return cliente;
         }
-        public void EditarClienteDal(Cliente clientes)
+        public void EditarClienteDal(Cliente cliente)
         {
-            string consulta = "update cliente set idpersona=" + clientes.IdPersona + "," +
-                                                        "tipocliente='" + clientes.TipoCliente + "'," +
-                                                        "codigocliente='" + clientes.CodigoCliente + "'" +
-                                                "where idcliente=" + clientes.IdCliente;
+            string consulta = "update cliente set idpersona=" + cliente.IdPersona + "," +
+                                                        "tipocliente='" + cliente.TipoCliente + "'," +
+                                                        "codigocliente='" + cliente.CodigoClie + "'," +
+                                                        "estado='" + cliente.Estado + "'" +
+                                                "where idcliente=" + cliente.IdCliente;
             conexion.Ejecutar(consulta);
         }
         public void EliminarClienteDal(int id)
         {
             string consulta = "delete from cliente where idcliente=" + id;
             conexion.Ejecutar(consulta);
-        }
-
-        public DataTable ClienteDatosDal()
-        {
-            string consulta = " SELECT CLIENTE.TIPOCLIENTE, CLIENTE.CODIGOCLIENTE, (PERSONA.NOMBRE+' ' +PERSONA.APELLIDO) NOMBRECOMPLETO " +
-                               " FROM CLIENTE INNER JOIN" +
-                               " PERSONA ON CLIENTE.IDPERSONA = PERSONA.IDPERSONA";
-
-            return conexion.EjecutarDataTabla(consulta, "fsdf");
-
         }
     }
 }

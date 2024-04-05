@@ -11,33 +11,26 @@ namespace SistemasVentas.BSS
 {
     public class VentaBss
     {
-        VentaDAL dal = new VentaDAL();
+        VentaDal dal = new VentaDal();
         public DataTable ListarVentaBss()
         {
-            return dal.ListarVentasDal();
+            return dal.ListarVentaDal();
         }
-
-        public void InsertarVentaBss(Venta v)
+        public void InsertarVentaBss(Venta venta)
         {
-            dal.InsertarVentaDAL(v);
+            dal.InsertarVentaDal(venta);
         }
-
         public Venta ObtenerVentaIdBss(int id)
         {
             return dal.ObtenerVentaIdDal(id);
         }
-        public void EditarVentaBss(Venta v)
+        public void EditarVentaBss(Venta p)
         {
-            dal.EditarVentaDal(v);
+            dal.EditarVentaDal(p);
         }
         public void EliminarVentaBss(int id)
         {
             dal.EliminarVentaDal(id);
-        }
-
-        public DataTable VentaDatosBss()
-        {
-            return dal.VentaDatosDal();
         }
     }
 }

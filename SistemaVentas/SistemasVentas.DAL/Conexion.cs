@@ -6,14 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-namespace DAL
+namespace SistemasVentas.DAL
 {
     public class conexion
     {
 
         public static string CONECTAR
         {
-            get { return @"Data Source=DESKTOP-MEJFDG4\SQL; Initial Catalog=TIENDABASE; Integrated Security=True; TrustServerCertificate=true;"; }
+            get { return @"Data Source=PCA-23; Initial Catalog=TIENDABD; Integrated Security=True; TrustServerCertificate=true;"; }
             //get { return ConfigurationManager.ConnectionStrings["cadena"].ToString(); }
         }
         public static DataSet EjecutarDataSet(string consulta)
@@ -53,7 +53,7 @@ namespace DAL
             string p = conexion.CONECTAR;
             SqlConnection conectar = new SqlConnection(conexion.CONECTAR);
             SqlCommand cmd = new SqlCommand(consulta, conectar);
-            cmd.CommandTimeout = 7000;
+            cmd.CommandTimeout = 5000;
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
             DataTable dt = new DataTable(tabla);
@@ -75,6 +75,5 @@ namespace DAL
                 return count == 1;
             }
         }
-    }
+     }
 }
-

@@ -1,5 +1,4 @@
-﻿using DAL;
-using SistemasVentas.Modelos;
+﻿using SistemasVentas.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -9,75 +8,64 @@ using System.Threading.Tasks;
 
 namespace SistemasVentas.DAL
 {
-    public class ProductoDAL
+    public class ProductoDal
     {
-        public DataTable ListarProductosDal()
+        public DataTable ListarProductoDal()
         {
-            string consulta = "select * from producto";
-            DataTable Lista = conexion.EjecutarDataTabla(consulta, "tabla");
-            return Lista;
+            string consulta = "SELECT PRODUCTO.IDPRODUCTO, TIPOPROD.NOMBRE AS TIPO_PRODUCTO, " +
+                                "MARCA.NOMBRE AS MARCA, PRODUCTO.NOMBRE AS PRODUCTO, PRODUCTO.CODIGOBARRA, " +
+                                "PRODUCTO.UNIDAD, PRODUCTO.DESCRIPCION, PRODUCTO.ESTADO\r\n" +
+                                "FROM     PRODUCTO INNER JOIN\r\n                  " +
+                                "TIPOPROD ON PRODUCTO.IDTIPOPROD = TIPOPROD.IDTIPOPROD INNER JOIN\r\n" +
+                                "MARCA ON PRODUCTO.IDMARCA = MARCA.IDMARCA";
+            DataTable lista = conexion.EjecutarDataTabla(consulta, "tabla");
+            return lista;
         }
-
-        public void InsertarProductosDAL(Producto prod)
+        public void InsertarProductoDal(Producto producto)
         {
-            string consulta = "insert into producto values(" + prod.IdTipoProducto + "," +
-                                                          "" + prod.IdMarca + "," +
-                                                          "'" + prod.Nombre + "'," +
-                                                          "'" + prod.CodigoBarras + "'," +
-                                                          "'" + prod.Unidad + "'," +
-                                                          "'" + prod.Descripcion + "'," +
-                                                          "'Activo')";
+            string consulta = "insert into producto values(" + producto.IdTipoProducto + "," +
+                                                            "" + producto.IdMarca + "," +
+                                                            "'" + producto.Nombre + "'," +
+                                                            "'" + producto.CodigoBarra + "'," +
+                                                            "" + producto.Unidad + "," +
+                                                            "'" + producto.Descripcion + "'," +
+                                                            "'Activo')";
             conexion.Ejecutar(consulta);
         }
-
-        public Producto ObtenerProductosIdDal(int id)
+        public Producto ObtenerProductoIdDal(int id)
         {
             string consulta = "select * from producto where idproducto=" + id;
             DataTable tabla = conexion.EjecutarDataTabla(consulta, "asdas");
-            Producto p = new Producto();
+            Producto producto = new Producto();
             if (tabla.Rows.Count > 0)
             {
-                p.IdProducto = Convert.ToInt32(tabla.Rows[0]["idproducto"]);
-                p.IdTipoProducto = Convert.ToInt32(tabla.Rows[0]["idtipoprod"]);
-                p.IdMarca = Convert.ToInt32(tabla.Rows[0]["idmarca"]);
-                p.Nombre = tabla.Rows[0]["nombre"].ToString();
-                p.CodigoBarras = tabla.Rows[0]["codigobarra"].ToString();
-                p.Unidad = Convert.ToInt32(tabla.Rows[0]["unidad"]);
-                p.Descripcion = tabla.Rows[0]["descripcion"].ToString();
-                p.Estado = tabla.Rows[0]["estado"].ToString();
+                producto.IdProducto = Convert.ToInt32(tabla.Rows[0]["idproducto"]);
+                producto.IdTipoProducto = Convert.ToInt32(tabla.Rows[0]["idtipoprod"]);
+                producto.IdMarca = Convert.ToInt32(tabla.Rows[0]["idmarca"]);
+                producto.Nombre = tabla.Rows[0]["nombre"].ToString();
+                producto.CodigoBarra = tabla.Rows[0]["codigobarra"].ToString();
+                producto.Unidad = Convert.ToInt32(tabla.Rows[0]["unidad"]);
+                producto.Descripcion = tabla.Rows[0]["descripcion"].ToString();
+                producto.Estado = tabla.Rows[0]["estado"].ToString();
             }
-            return p;
-
+            return producto;
         }
-
-        public void EditarProductoDal(Producto prod)
+        public void EditarProductoDal(Producto producto)
         {
-            string consulta = "update producto set idtipoprod=" + prod.IdTipoProducto + "," +
-                                                        "idmarca=" + prod.IdMarca + "," +
-                                                        "nombre='" + prod.Nombre + "'," +
-                                                        "codigobarra='" + prod.CodigoBarras + "'," +
-                                                        "unidad=" + prod.Unidad + "," +
-                                                        "descripcion='" + prod.Descripcion + "'," +
-                                                        "estado='" + prod.Estado + "' " +
-                                                "where idproducto=" + prod.IdProducto;
+            string consulta = "update producto set idtipoprod=" + producto.IdTipoProducto + "," +
+                                                        "idmarca=" + producto.IdMarca + "," +
+                                                        "nombre='" + producto.Nombre + "'," +
+                                                        "codigobarra='" + producto.CodigoBarra + "'," +
+                                                        "unidad=" + producto.Unidad + "," +
+                                                        "descripcion='" + producto.Descripcion + "'," +
+                                                        "estado='" + producto.Estado + "' " +
+                                                "where idproducto=" + producto.IdProducto;
             conexion.Ejecutar(consulta);
         }
-        public void EliminarProductosDal(int id)
+        public void EliminarProductoDal(int id)
         {
             string consulta = "delete from producto where idproducto=" + id;
             conexion.Ejecutar(consulta);
-        }
-
-        public DataTable ProductoDatosDal()
-        {
-            string consulta = " SELECT TIPOPROD.NOMBRE, MARCA.NOMBRE AS Expr1, PRODUCTO.NOMBRE AS Expr2,  " +
-                               " PRODUCTO.CODIGOBARRA, PRODUCTO.UNIDAD, PRODUCTO.DESCRIPCION" +
-                               " FROM PRODUCTO INNER JOIN" +
-                               " TIPOPROD ON PRODUCTO.IDTIPOPROD = TIPOPROD.IDTIPOPROD INNER JOIN" +
-                               "  MARCA ON PRODUCTO.IDMARCA = MARCA.IDMARCA";
-
-            return conexion.EjecutarDataTabla(consulta, "fsdf");
-
         }
     }
 }

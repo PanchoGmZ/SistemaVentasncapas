@@ -11,36 +11,26 @@ namespace SistemasVentas.BSS
 {
     public class ClienteBss
     {
-        ClienteDAL dal = new ClienteDAL();
+        ClienteDal dal = new ClienteDal();
         public DataTable ListarClienteBss()
         {
             return dal.ListarClienteDal();
         }
-
         public void InsertarClienteBss(Cliente cliente)
         {
-            dal.InsertarClienteDAL(cliente);
+            dal.InsertarClienteDal(cliente);
         }
-
         public Cliente ObtenerClienteIdBss(int id)
         {
             return dal.ObtenerClienteIdDal(id);
         }
-
-        public void EditarClienteBss(Cliente clientes)
+        public void EditarClienteBss(Cliente p)
         {
-            dal.EditarClienteDal(clientes);
+            dal.EditarClienteDal(p);
         }
         public void EliminarClienteBss(int id)
         {
             dal.EliminarClienteDal(id);
         }
-
-        public DataTable ListarClienteDatosBss()
-        {
-            return dal.ClienteDatosDal();
-        }
-
     }
 }
-

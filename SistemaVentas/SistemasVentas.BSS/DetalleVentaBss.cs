@@ -1,5 +1,4 @@
-﻿using DAL;
-using SistemasVentas.DAL;
+﻿using SistemasVentas.DAL;
 using SistemasVentas.Modelos;
 using System;
 using System.Collections.Generic;
@@ -12,30 +11,26 @@ namespace SistemasVentas.BSS
 {
     public class DetalleVentaBss
     {
-        DetalleVentaDAL DAL = new DetalleVentaDAL();
+        DetalleVentaDal dal = new DetalleVentaDal();
         public DataTable ListarDetalleVentaBss()
         {
-            return DAL.ListarDetalleVentaDal();
+            return dal.ListarDetalleVentaDal();
         }
-        public void InsertarDetalleVentaBss(DetalleVenta detalleventa)
+        public void InsertarDetalleVentaBss(DetalleVenta detalleVenta)
         {
-            DAL.InsertarDetalleVentaDAL(detalleventa);
+            dal.InsertarDetalleVentaDal(detalleVenta);
         }
         public DetalleVenta ObtenerDetalleVentaIdBss(int id)
         {
-            return DAL.ObtenerDetalleVentaIdDal(id);
+            return dal.ObtenerDetalleVentaIdDal(id);
         }
-        public void EditarDetalleVentaBss(DetalleVenta p)
+        public void EditarDetalleVentaBss(DetalleVenta detalleVenta)
         {
-            DAL.EditarDetalleVDal(p);
+            dal.EditarDetalleVentaDal(detalleVenta);
         }
         public void EliminarDetalleVentaBss(int id)
         {
-            DAL.EliminarDetalleVentaDal(id);
-        }
-        public DataTable DetalleVentaDatosBSS()
-        {
-            return DAL.DetalleVDatosDal();
+            dal.EliminarDetalleVentaDal(id);
         }
     }
 }

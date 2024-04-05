@@ -11,30 +11,26 @@ namespace SistemasVentas.BSS
 {
     public class ProveeBss
     {
-        ProveeDAL DAL = new ProveeDAL();
+        ProveeDal dal = new ProveeDal();
         public DataTable ListarProveeBss()
         {
-            return DAL.ListarProveeDal();
+            return dal.ListarProveeDal();
         }
         public void InsertarProveeBss(Provee provee)
         {
-            DAL.InsertarProveeDAL(provee);
+            dal.InsertarProveeDal(provee);
         }
         public Provee ObtenerProveeIdBss(int id)
         {
-            return DAL.ObtenerProveeIdDal(id);
+            return dal.ObtenerProveeIdDal(id);
         }
-        public void EditarProveeBss(Provee p)
+        public void EditarProveeBss(Provee provee)
         {
-            DAL.EditarProveeDal(p);
+            dal.EditarProveeDal(provee);
         }
         public void EliminarProveeBss(int id)
         {
-            DAL.EliminarProveeDal(id);
-        }
-        public DataTable ProveeDatosBSS()
-        {
-            return DAL.ProveeDatosDal();
+            dal.EliminarProveeDal(id);
         }
     }
 }
